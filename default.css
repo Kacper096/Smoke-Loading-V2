@@ -1,0 +1,204 @@
+body{
+    margin:0;
+    padding:0;
+    background:#000;
+    width: 100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+div.smoke::before{
+    content:url(kisspng-sword-dagger-sword-5a6e6a2d4a6577.1790992715171855813047.png);
+    position:absolute;
+    left:-160px;
+    top: -250px;
+    width:715px; height: 157px;
+    clip: rect(200px,715px,357px,0px);
+    opacity: 0.43;
+    animation: swordShow 3s linear infinite;
+    animation-delay: 2s;
+}
+div.smoke{
+    position: relative;
+}
+
+.smoke span:not(.lastChild){
+    border-right: 3px solid rgba(220,20,60,0.7);
+    padding-left:10px;
+    padding-right:5px;
+}
+.smoke span{
+    position: relative;
+    color:aliceblue;
+    font-size:60px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    animation: animate 3s linear infinite;
+}
+
+.smoke span:nth-child(1)
+{
+    animation-delay: 0s;
+}
+.smoke span:nth-child(2)
+{
+    animation-delay: 0.1s;
+}
+.smoke span:nth-child(3)
+{
+    animation-delay: 0.2s;
+}
+.smoke span:nth-child(4)
+{
+    animation-delay: 0.3s;
+}
+.smoke span:nth-child(5)
+{
+    animation-delay: 0.4s;
+}
+.smoke span:nth-child(6)
+{
+    animation-delay: 0.5s;
+}
+.smoke span:nth-child(7)
+{
+    animation-delay: 0.6s;
+}
+.smoke span:nth-child(8)
+{
+    animation-delay: 0.7s;
+}
+.smoke span:nth-child(9)
+{
+    animation-delay: 0.8s;
+}
+.smoke span:nth-child(10)
+{
+    animation-delay: 0.9s;
+}
+@keyframes animate
+{
+    0%
+    {
+        filter:blur(0);
+    }
+    40%
+    {
+        filter:blur(20px);
+    }
+    80%
+    {
+        filter:blur(0);
+    }
+    100%
+    {
+        filter:blur(0);
+    }
+}
+@keyframes swordShow
+{
+    0%
+    {
+        opacity: 0.43;
+    }
+    10%
+    {
+        opacity: 0.53;
+    }
+    20%
+    {
+        opacity: 0.63;
+    }
+    40%
+    {
+        opacity: 0.73;
+    }
+    60%
+    {
+        opacity: 0.83;
+    }
+    80%
+    {
+        opacity: 0.93;
+    }
+    100%
+    {
+        opacity: 100%;
+    }
+}
+
+section.fireBox
+{
+    display: flex;
+    position: absolute;
+    min-width: 100%;
+    min-height: 400px;
+    bottom:0;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+
+section.fireBox #fire
+{
+    position: fixed;
+    max-width: 100%;
+    min-height: 100%;
+    width:auto;
+    height: auto;
+    overflow:hidden;
+    z-index: -100;
+    bottom:0;
+    background-size: cover;
+}
+
+@keyframes smoke
+{
+    0%
+    {
+        height: 1000px;
+    }
+    20%
+    {
+        height: 800px;
+    }
+    40%
+    {
+        height: 600px;
+    }
+    60%
+    {
+        height: 400px;
+    }
+    80%
+    {
+        height: 200px;
+    }
+    100%
+    {
+        height: 150px;
+    }
+}
+
+footer
+{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    width:100vw;
+    height:30px;
+    top:0;
+}
+footer a
+{
+    font-size:11px;
+    color:grey;
+    text-align: left;
+    text-decoration: none;
+}
+footer a::before
+{
+    content:'\00A9';
+}
